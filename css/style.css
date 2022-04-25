@@ -117,14 +117,22 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .ellipse {
     display: inline-flex;
+    align-items: center;
     width: 40px;
     height: 40px;
     border-radius: 20px;
     background-color: #2aacc8;
+}
+
+.fa-icon {
+    margin: auto;
+    font-size: 25px;    
+    color: #fff;
 }
 
 .card-title {
