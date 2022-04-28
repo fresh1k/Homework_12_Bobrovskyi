@@ -29,7 +29,7 @@ html, body {
 .header-container {
     margin: 0 auto;
     height: 100%;
-    width: 1600px;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,7 +116,7 @@ html, body {
 .card {
     margin: 0 auto;
     padding-top: 50px;
-    width: 1600px;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -226,7 +226,7 @@ html, body {
 
 .footer-container {
     margin: 0 auto;
-    width: 1600px;
+    width: 1000px;
     height: 100%;
     display: flex;
     justify-content: space-between;
