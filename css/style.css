@@ -49,17 +49,27 @@ html, body {
 
 /* NavBar */
 
-.navbar-header {
-    display: flex;
-}
 
-.nav-links{
+ul {
     list-style: none;
-    display: flex;
 }
 
-.nav-links li a {
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
     padding-right: 50px;
+    position: relative;
+}
+
+.nav-item:hover .nav-items-dropdown{
+    display: block;
+    background: #fff;
+  }
+
+.nav-item-link {
     font-size: 13px;
     line-height: 20px;
     color: #000;
@@ -68,9 +78,49 @@ html, body {
     text-transform: uppercase;
 }
 
-.nav-links li a:hover{
+.nav-item:hover {
+    padding-left: 15px;
+    border-top: 5px solid #2aacc8;
+    background-color: #ffffff;
+}
+
+.nav-items-dropdown {
+    display: none;
+    width: 199px;
+    text-align: left;
+    padding: 0 0 24px  16px;
+    filter: drop-shadow(0px 5px 0px #2aacc8);
+    background-color: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+}
+
+.nav-items-dropdown a {
+    font-size: 11px;
+    line-height: 36px;
+    text-transform: none;
+}
+
+.nav-items-dropdown a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid #e8ebf1;
+}
+
+.nav-item-link:hover{
     color: #2aacc8;
     transition: all 0.3s ease-in-out;
+}
+
+.nav-image {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 35px;
+    top: 5px;
 }
 
 /* Banner */
@@ -82,10 +132,13 @@ html, body {
     background-color: #81e4ed;
 }
 
-.banner {
+.carousel {
     width: 1000px;
-    height: 440px;
     margin: 0 auto;
+}
+
+.banner {
+    height: 440px;
     background-color: #e05936;
     background-image: url("../img/cup.png"), url("../img/message.png");
     background-repeat: no-repeat;
@@ -99,6 +152,16 @@ html, body {
     font-size: 50px;
     color: #ffffff;
     font-weight: 700;
+}
+
+.carousel-image {
+    width: 1000px;
+    height: 440px;
+}
+
+.slick-dots li button:before {
+    margin: -5px;
+    font-size: 50px;
 }
 
 /* Main section */
@@ -154,6 +217,13 @@ html, body {
     color: #363636;
 }
 
+.arrow-image {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-90deg);
+}
+
 .card-item-link {
     font-size: 13px;
     line-height: 20px;
@@ -205,6 +275,7 @@ html, body {
     filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
     background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
     border: 1px solid #2aacc8;
+    cursor: pointer;
 }
 
 .btn-link {
