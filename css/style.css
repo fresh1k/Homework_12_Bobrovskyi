@@ -8,13 +8,7 @@
 
 html, body {
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-}
-
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden; 
 }
 
 /* Header */
@@ -38,12 +32,11 @@ html, body {
 
 .logo {
     font-size: 30px;
-    font-weight: 900;
-    line-height: 20px;
 
 }
 
 .lite-logo {
+    font-weight: 400;
     color: #2aacc8;
 }
 
@@ -56,11 +49,10 @@ ul {
 
 .nav-items{
     display: flex;
-    align-items: center;
 }
-
 .nav-item {
-    padding-right: 50px;
+    margin-right: 20px;
+    border-top: 5px solid rgba(42, 172, 200, 0);
     position: relative;
 }
 
@@ -70,6 +62,8 @@ ul {
   }
 
 .nav-item-link {
+    display: inline-flex;
+    padding: 5px 15px 5px 5px;
     font-size: 13px;
     line-height: 20px;
     color: #000;
@@ -79,26 +73,23 @@ ul {
 }
 
 .nav-item:hover {
-    padding-left: 15px;
     border-top: 5px solid #2aacc8;
     background-color: #ffffff;
 }
 
 .nav-items-dropdown {
     display: none;
-    width: 199px;
-    text-align: left;
-    padding: 0 0 24px  16px;
+    width: 165px;
     filter: drop-shadow(0px 5px 0px #2aacc8);
     background-color: #ffffff;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 0;
-    z-index: 2;
 }
 
 .nav-items-dropdown a {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 400;
     line-height: 36px;
     text-transform: none;
 }
@@ -106,8 +97,21 @@ ul {
 .nav-items-dropdown a::after {
     content: "";
     display: block;
-    width: 90%;
+    width: 100%;
     border-bottom: 1px solid #e8ebf1;
+}
+
+.nav-item-dropdown-link {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-item-dropdown-link:hover{
+    color: #2aacc8;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-item-link:hover{
@@ -118,36 +122,41 @@ ul {
 .nav-image {
     width: 10px;
     height: 10px;
+    border-radius: 1px;
+    background-image: url('../icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
-    right: 35px;
-    top: 5px;
+    top: 12px;
+    right: 3px;
 }
 
 /* Banner */
 
-.header-banner {
+.banner {
     padding-top: 20px;
     width: 100%;
     height: 500px;
     background-color: #81e4ed;
 }
 
+
 .carousel {
     width: 1000px;
     margin: 0 auto;
 }
 
-.banner {
+
+.slider {
     height: 440px;
     background-color: #e05936;
-    background-image: url("../img/cup.png"), url("../img/message.png");
+    background-image: url("../img/cup_1.png"), url("../img/message.png");
     background-repeat: no-repeat;
     background-position: center center, center right;
 }
 
 .banner-title {
     width: 369px;
-    height: 242px;  
     padding: 70px 20px 20px 44px;
     font-size: 50px;
     color: #ffffff;
@@ -160,15 +169,12 @@ ul {
 }
 
 .slick-dots li button:before {
-    margin: -5px;
     font-size: 50px;
 }
 
 /* Main section */
 
 .main {
-    margin-top: 477px;
-    flex: 1 1 auto;
     width: 100%;
     height: 300px;
     filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
@@ -186,17 +192,14 @@ ul {
     position: relative;
 }
 
-.ellipse {
+.fa-icon {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
     border-radius: 20px;
     background-color: #2aacc8;
-}
-
-.fa-icon {
-    margin: auto;
     font-size: 25px;    
     color: #fff;
 }
@@ -221,18 +224,27 @@ ul {
     display: inline-block;
     width: 10px;
     height: 10px;
+    background-image: url('../icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     transform: rotate(-90deg);
 }
 
 .card-item-link {
+    padding-left: 3px;
     font-size: 13px;
     line-height: 20px;
     color: #2aacc8;
     text-decoration: none;
 }
 
-.bislite-psd { 
-    margin-top: 140px;
+.card-item-link:hover{
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.bislite-psd{
+    margin: 30px 0;
 }
 
 .bislite-psd-download {
@@ -245,6 +257,7 @@ ul {
     background-color: #e8fcfe;
     border: 1px solid #81e4ed;
     position: relative;
+    z-index: 1;
 }
 
 .bislite-psd-text {
@@ -253,15 +266,6 @@ ul {
     font-size: 16px;
     line-height: 26px;
     color: #363636;
-}
-
-
-.icon-download-psd {    
-    font-size: 28px;
-    color: #fff; 
-    position: absolute;
-    right: 230px;
-    z-index: 2;
 }
 
 .btn-download {
@@ -278,6 +282,29 @@ ul {
     cursor: pointer;
 }
 
+.btn-download:hover {
+    box-shadow: 0 0 10px 0 #2aacc8 inset, 0 0 10px 4px #5fcddd;
+}
+
+.icon-download-psd {    
+    font-size: 28px;
+    color: #fff; 
+    position: absolute;
+    top: 55px;
+    right: 265px;
+    z-index: 2;
+}
+
+.btn-link::after {
+    content: " ";
+    display: block;
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .btn-link {
     font-size: 18px;
     line-height: 20px;
@@ -287,8 +314,12 @@ ul {
     text-decoration: none;
 }
 
+.btn-link:hover {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
 .footer {
-    margin-top: 300px;
     width: 100%;
     height: 93px;
     background-color: #e8ebf1;
@@ -313,8 +344,6 @@ ul {
 
 .footer-logo {
     font-size: 50px;
-    font-weight: 900;
-    line-height: 20px;
 }
 
 
