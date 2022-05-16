@@ -13,7 +13,6 @@ html, body {
 
 /* Header */
 .header {
-    width: 100%;
     height: 120px;
     filter: drop-shadow(0px 2px 2.5px rgba(0,0,0,0.07));
     background-color: #e8ebf1;
@@ -30,16 +29,10 @@ html, body {
     justify-content: space-between;
     align-items: center;
 
-    }
-
-.logo {
-    font-size: 30px;
-
 }
 
-.lite-logo {
-    font-weight: 400;
-    color: #2aacc8;
+.logo-link:hover {
+    opacity: .5;
 }
 
 /* NavBar */
@@ -54,7 +47,7 @@ ul {
 }
 .nav-item {
     margin-right: 20px;
-    border-top: 5px solid rgba(42, 172, 200, 0);
+    border-top: 5px solid transparent;
     position: relative;
 }
 
@@ -165,8 +158,9 @@ ul {
     font-weight: 700;
 }
 
-.carousel-image {
-    width: 1000px;
+.slick-slide img {
+    margin: 0 auto;
+    width: auto;
     height: 440px;
 }
 
@@ -182,20 +176,20 @@ ul {
     filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
     background-color: #e8ebf1;
     border: 1px solid rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
 }
 
 .card {
     margin: 0 auto;
-    padding-top: 50px;
     width: 1000px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative;
 }
 
 .fa-icon {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -207,8 +201,10 @@ ul {
 }
 
 .card-title {
-    padding: 0 0 20px 20px;
-    display: inline-flex;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    align-items: center;
     font-size: 15px;
     line-height: 20px; 
     text-transform: uppercase;
@@ -220,6 +216,7 @@ ul {
     font-size: 13px;
     line-height: 20px;
     color: #363636;
+    overflow: hidden;
 }
 
 .arrow-image {
@@ -245,8 +242,8 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-.bislite-psd{
-    margin-top: 60px;
+.bislite-psd {
+    padding: 68px 0;
 }
 
 .bislite-psd-download {
@@ -292,8 +289,8 @@ ul {
     font-size: 28px;
     color: #fff; 
     position: absolute;
-    top: 55px;
-    right: 265px;
+    top: 15px;
+    left: 20px;
     z-index: 2;
 }
 
@@ -322,8 +319,6 @@ ul {
 }
 
 .footer {
-    margin-top: 76px;
-    width: 100%;
     height: 93px;
     background-color: #e8ebf1;
     border: 1px solid rgba(0,0,0,0.15);
@@ -343,10 +338,6 @@ ul {
     font-size: 13px;
     line-height: 20px;
     color: #363636;
-}
-
-.footer-logo {
-    font-size: 50px;
 }
 
 
